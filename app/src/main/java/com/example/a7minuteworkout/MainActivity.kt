@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         var llStart: LinearLayout?=null;
         llStart = findViewById(R.id.llStart)
         llStart.setOnClickListener {
-            val intent = Intent(this,ExerciseActivity::class.java)
+            val intent = Intent(this,CategoryActivity::class.java)
             startActivity(intent)
 
         }

@@ -1,5 +1,6 @@
 package com.example.a7minuteworkout
 
+import android.content.Intent
 import android.media.Image
 import android.media.MediaPlayer
 import android.net.Uri
@@ -31,13 +32,15 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     private var exerciseList: ArrayList<ExerciseModel>?=null
     private var currentExercisePosition =-1
     private var restProgress=0
+    private var restTimerDuration: Long=9
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress=0
-    private var exerciseTimerDuration: Long =30
-    private var pauseOffset: Long =0
+    private var exerciseTimerDuration: Long =10
+    //private var pauseOffset: Long =0
     private var tts: TextToSpeech?= null
     private var player: MediaPlayer?=null
     private var exerciseAdapter: ExerciseStatusAdapter?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
@@ -62,8 +65,9 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
             onBackPressed()
         }
         tts= TextToSpeech(this,this)
-        setupRestView()
+
         exerciseList=Constants.defaultExerciseList()
+        setupRestView()
         setupExerciseStatusRecyclerView()
 
 
@@ -88,7 +92,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
     private fun setResetProgressBar(){
         this.progressbar?.progress=restProgress
-        restTimer = object:CountDownTimer(10000,1000)
+        restTimer = object:CountDownTimer(restTimerDuration*1000,1000)
         {
             override fun onTick(millisUtiFinished: Long) {
                 restProgress++
@@ -98,6 +102,8 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
             override fun onFinish() {
                 currentExercisePosition++
+                exerciseList!![currentExercisePosition].setIsSelected(true)
+                exerciseAdapter!!.notifyDataSetChanged()
                 setupExerciseRestView()
             }
 
@@ -135,13 +141,15 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
             override fun onFinish() {
                 if(currentExercisePosition<exerciseList?.size!!-1){
                     setupRestView()
+                    exerciseList!![currentExercisePosition].setIsSelected(false)
+                    exerciseList!![currentExercisePosition].setIsCompleted(true)
+                    exerciseAdapter!!.notifyDataSetChanged()
                 }
                 else{
-                    Toast.makeText(
-                        this@ExerciseActivity,
-                        "We will start the next rest screen",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    finish()
+                    val intent = Intent(this@ExerciseActivity,FinishAtcivity::class.java)
+                    startActivity(intent)
+
                 }
             }
 
