@@ -21,7 +21,36 @@ import kotlinx.android.synthetic.main.activity_exercise.*
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
+
+//        var btnStart=findViewById<Button>(R.id.btnStart)
+//        btnStart.setOnClickListener {
+//            val intent = Intent(this,SecoundExercise::class.java)
+//            startActivity(intent)
+//
+//        }
     }
+
+     fun fullBody(view: View) {
+         val intent=Intent(this,SecoundExercise::class.java)
+         startActivity(intent)
+     }
+     fun belly(view: View) {
+         val intent=Intent(this,ExerciseActivity::class.java)
+         startActivity(intent)
+     }
+
+     fun hand(view: View) {
+         val intent=Intent(this,ExerciseActivity::class.java)
+         startActivity(intent)
+     }
+     fun leg(view: View) {
+         val intent=Intent(this,ExerciseActivity::class.java)
+         startActivity(intent)
+     }
+     fun buttmuscles(view: View) {
+         val intent=Intent(this,ExerciseActivity::class.java)
+         startActivity(intent)
+     }
 
 
  }

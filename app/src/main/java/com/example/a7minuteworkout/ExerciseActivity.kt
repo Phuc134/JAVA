@@ -164,6 +164,7 @@ class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         }
         speakOut(exerciseList!![currentExercisePosition].getName())
         setExerciseProgressBar()
+        imgGif?.setImageResource(exerciseList!![currentExercisePosition].getImage())
         ivImage?.setImageResource(exerciseList!![currentExercisePosition].getImage())
         tvExerciseName?.text=exerciseList!![currentExercisePosition].getName()
     }

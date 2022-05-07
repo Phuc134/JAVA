@@ -10,16 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.7MinuteWorkout">
         <activity
+            android:name=".ChartActivity"
+            android:exported="false" />
+        <activity
             android:name=".FinishAtcivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".testActivity"
-
             android:exported="false" />
-        <activity android:name=".CategoryActivity"
+        <activity
+            android:name=".CategoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".SecoundExercise"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".ExerciseActivity"
             android:exported="false"

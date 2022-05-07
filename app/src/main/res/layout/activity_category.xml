@@ -27,8 +27,9 @@
 
                     android:orientation="vertical">
                     <LinearLayout
+                        android:onClick="fullBody"
                         android:layout_width="fill_parent"
-                        android:layout_height="150.0dp"
+                        android:layout_height="160.0dp"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:orientation="horizontal">
@@ -51,14 +52,7 @@
 
 
                     </LinearLayout>
-                    <Button
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10.0dp"
-                        android:background="@drawable/btn"
-                        android:text="GET Started"
-                        android:textAllCaps="true"
-                        android:textColor="#FFFFFF"/>
+
                 </LinearLayout>
                      <LinearLayout
                          android:background="@drawable/main_images"
@@ -69,6 +63,7 @@
 
                          android:orientation="vertical">
                          <LinearLayout
+                             android:onClick="belly"
                              android:layout_width="fill_parent"
                              android:layout_height="150.0dp"
                              android:layout_gravity="center"
@@ -93,14 +88,7 @@
 
 
                          </LinearLayout>
-                         <Button
-                             android:layout_width="fill_parent"
-                             android:layout_height="wrap_content"
-                             android:layout_margin="10.0dp"
-                             android:background="@drawable/btn"
-                             android:text="GET Started"
-                             android:textAllCaps="true"
-                             android:textColor="#FFFFFF"/>
+
                      </LinearLayout>
                      <LinearLayout
                          android:background="@drawable/main_images"
@@ -111,6 +99,7 @@
 
                          android:orientation="vertical">
                          <LinearLayout
+                             android:onClick="hand"
                              android:layout_width="fill_parent"
                              android:layout_height="150.0dp"
                              android:layout_gravity="center"
@@ -135,14 +124,7 @@
 
 
                          </LinearLayout>
-                         <Button
-                             android:layout_width="fill_parent"
-                             android:layout_height="wrap_content"
-                             android:layout_margin="10.0dp"
-                             android:background="@drawable/btn"
-                             android:text="GET Started"
-                             android:textAllCaps="true"
-                             android:textColor="#FFFFFF"/>
+
                      </LinearLayout>
                      <LinearLayout
                          android:background="@drawable/main_images"
@@ -153,6 +135,7 @@
 
                          android:orientation="vertical">
                          <LinearLayout
+                             android:onClick="leg"
                              android:layout_width="fill_parent"
                              android:layout_height="150.0dp"
                              android:layout_gravity="center"
@@ -177,14 +160,7 @@
 
 
                          </LinearLayout>
-                         <Button
-                             android:layout_width="fill_parent"
-                             android:layout_height="wrap_content"
-                             android:layout_margin="10.0dp"
-                             android:background="@drawable/btn"
-                             android:text="GET Started"
-                             android:textAllCaps="true"
-                             android:textColor="#FFFFFF"/>
+
                      </LinearLayout>
                      <LinearLayout
                          android:background="@drawable/main_images"
@@ -195,6 +171,7 @@
 
                          android:orientation="vertical">
                          <LinearLayout
+                             android:onClick="buttmuscles"
                              android:layout_width="fill_parent"
                              android:layout_height="150.0dp"
                              android:layout_gravity="center"
@@ -219,14 +196,7 @@
 
 
                          </LinearLayout>
-                         <Button
-                             android:layout_width="fill_parent"
-                             android:layout_height="wrap_content"
-                             android:layout_margin="10.0dp"
-                             android:background="@drawable/btn"
-                             android:text="GET Started"
-                             android:textAllCaps="true"
-                             android:textColor="#FFFFFF"/>
+
                      </LinearLayout>
 
                  </LinearLayout>
